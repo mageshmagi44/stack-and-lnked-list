@@ -139,63 +139,6 @@ class linked_list:
 
 
 
-
-
-
-
-
-
-
-
-
-machaaaaaaa
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-def tarverse(self):
-    current=self.head
-    while current:
-        print(current.data,end="-->")
-        current=current.next        
-
-
-
 a=stack()
 a.push(1)
 a.push(2)
