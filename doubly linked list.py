@@ -15,13 +15,12 @@ class doublyll:
         while n:
             print(n.data,"-->",end=" ")
             n=n.nref
-
     def revtraverse(self):
         if self.head==None:
-            return "empty likedlist"
+            return "empty ll"
         n=self.head
         while n.nref:
-            n=n.ref
+            n=n.nref
         while n:
             print(n.data,"-->",end=" ")
             n=n.pref
