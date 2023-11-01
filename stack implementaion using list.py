@@ -1,7 +1,7 @@
 class stack:
     def __init__(self,size) -> None:
         self.size=size
-        self.stack=[None]*self.size
+        self.__stack=[None]*self.size
         self.top=-1
 
 
@@ -10,18 +10,18 @@ class stack:
             return "over flow"
         else:
             self.top+=1
-            self.stack[self.top]=value
+            self.__stack[self.top]=value
     def pop(self):
         if self.top==-1:
             return "emppty"
         else:
-            data=self.stack[self.top]
+            data=self.__stack[self.top]
             self.top-=1
             print(data)
 
     def traverse(self):
         for i in range(self.top+1):
-            print(self.stack[i],end=" ")
+            print(self.__stack[i],end=" ")
 
 
 s=stack(4)
@@ -31,3 +31,9 @@ s.push(100)
 s.pop()
 s.pop()
 s.traverse()
+
+
+
+
+
+        
