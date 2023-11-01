@@ -20,10 +20,14 @@ class Queue:
        if self.front==None:
           return "queue is empty"
        else:
+          data=self.front.data
           self.front=self.front.next
+          if self.front ==None:
+             self.rear=None
+          return data
 
     def isempty(self):
-       return self.front==None
+       return self.front is None
     
     def size(self):
        curr=self.front
@@ -33,7 +37,16 @@ class Queue:
           curr=curr.next
        print(count)
        
-        
+    def frontitem(self):
+       if self.front==None:
+          return "empty"
+       else:
+          return self.front.data
+    def rearitem(self):
+       if self.front==None:
+          return "empty"
+       else:
+          return self.rear.data  
 
     def traverse(self):
        curr=self.front
@@ -47,5 +60,10 @@ s.enqueue(20)
 s.enqueue(30)
 s.dequue()
 s.enqueue(10)
-s.size()
+s.dequue()
+s.dequue()
+s.dequue()
+s.enqueue(10)
+
 s.traverse()
+print(s.isempty())
