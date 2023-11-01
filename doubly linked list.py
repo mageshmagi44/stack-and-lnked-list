@@ -24,3 +24,21 @@ class doublyll:
         while n:
             print(n.data,"-->",end=" ")
             n=n.pref
+    def insert_empty(self,data):
+        newnode=node(data)
+        if self.head==None:
+            self.head=newnode
+        else:
+            print("ll is not empty")
+
+    def prepend(self,data):
+        newnode=node(data)
+        if self.head==None:
+            self.head=newnode
+            return
+        else:
+            newnode.nref=self.head
+            self.head.pref=newnode
+            self.head=newnode
+    def append(self,data):
+        
