@@ -41,4 +41,20 @@ class doublyll:
             self.head.pref=newnode
             self.head=newnode
     def append(self,data):
-        
+        newnode=node(data)
+        if self.head==None:
+            self.head=newnode
+        else:
+            n=self.head
+            while n.nref!=None:
+                n=n.nref
+            n.nref=newnode
+            newnode.pref=n
+
+
+d=doublyll()
+d.append(100)
+d.append(1000)
+d.prepend(10)
+d.prepend(1)
+d.traverse()
